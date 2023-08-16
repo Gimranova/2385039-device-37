@@ -69,31 +69,129 @@
     </header>
 
     <main class="main-container">
+
       <section class="promotion-section">
         <h2 class="visually-hidden">Рекламные слайды товаров.</h2>
-        <div class="promotion-slider">
-          <img class="promotion-slider-image" src="./images/promotion-images/promotion-slider-1.png" width="560"
-            height="560" alt="Фото квадрокоптера.">
-        </div>
-        <div class="promotion-list">
-          <h4 class="promotion-slogan">Порхает как бабочка, жалит&nbsp;как&nbsp;пчела!</h4>
-          <p class="promotion-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
-            замаскированным под стандартную
-            камеру.
-          </p>
-          <a class="promotion-details" href="#">Подробнее</a>
-          <div class="details-argument-wrapper">
-            <div>
-              <span class="details-argument-item">800 м</span>
-              <span class="details-argument">Дальность полета</span>
+
+        <div class="promotion-slider-wrapper">
+          <div class="promotion-slider">
+            <img class="promotion-slider-image" src="./images/promotion-images/promotion-slider-1.png" width="560"
+              height="560" alt="Фото квадрокоптера.">
+            <div class="slider-controls">
+              <button class="slider-button slider-next" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="slider-button slider-prev" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
             </div>
-            <div>
-              <span class="details-argument-item">50 м</span>
-              <span class="details-argument">Радиус&nbsp;поражения</span>
+          </div>
+          <div class="promotion-list">
+            <h4 class="promotion-slogan">Порхает как бабочка, жалит&nbsp;как&nbsp;пчела!</h4>
+            <p class="promotion-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+              замаскированным под стандартную
+              камеру.
+            </p>
+            <a class="promotion-details" href="#">Подробнее</a>
+            <div class="details-argument-wrapper">
+              <div>
+                <span class="details-argument-item">800 м</span>
+                <span class="details-argument">Дальность полета</span>
+              </div>
+              <div>
+                <span class="details-argument-item">50 м</span>
+                <span class="details-argument">Радиус&nbsp;поражения</span>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="promotion-slider-wrapper promotion-slider-wrapper-second" style="display: none;">
+          <div class="promotion-slider">
+            <img class="promotion-slider-image" src="./images/promotion-images/promotion-slider-2.png" width="560"
+              height="560" alt="Фото фитнес-браслета.">
+            <div class="slider-controls">
+              <button class="slider-button slider-next" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="slider-button slider-prev" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+          </div>
+          <div class="promotion-list">
+            <h4 class="promotion-slogan">Худеем <br> правильно!</h4>
+            <p class="promotion-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+              соблюдать диету.
+            </p>
+            <a class="promotion-details" href="#">Подробнее</a>
+            <div class="details-argument-wrapper">
+              <div>
+                <span class="details-argument-item">48 часов</span>
+                <span class="details-argument">Без подзарядки</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="promotion-slider-wrapper promotion-slider-wrapper-third" style="display: none;">
+          <div class="promotion-slider">
+            <img class="promotion-slider-image" src="./images/promotion-images/promotion-slider-3.png" width="560"
+              height="560" alt="Фото селфи-палки.">
+            <div class="slider-controls">
+              <button class="slider-button slider-next" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="slider-button slider-prev" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+          </div>
+          <div class="promotion-list">
+            <h4 class="promotion-slogan">Делай селфи, как&nbsp;Бен&nbsp;Стиллер!</h4>
+            <p class="promotion-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
+              метров длиной и весом всего 5 кг.
+            </p>
+            <a class="promotion-details" href="#">Подробнее</a>
+            <div class="details-argument-wrapper">
+              <div>
+                <span class="details-argument-item">8,5 м</span>
+                <span class="details-argument">Длина палки</span>
+              </div>
+              <div>
+                <span class="details-argument-item">5 кг</span>
+                <span class="details-argument">Вес палки</span>
+              </div>
+              <div>
+                <span class="details-argument-item">Карбон</span>
+                <span class="details-argument">Материал</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-pagination-wrapper">
+          <ol class="slider-pagination">
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                <span class="visually-hidden">1 фото</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">2 фото</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">3 фото</span>
+              </button>
+            </li>
+          </ol>
+        </div>
+
       </section>
+
       <section class="directory-section">
         <h2 class="visually-hidden">Каталог товаров по видам.</h2>
         <ol class="directory-section-list">
