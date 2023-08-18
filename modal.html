@@ -522,7 +522,84 @@
       </div>
     </footer>
 
+    <!--Модальное окно-->
+    <div class="modal-container">
+      <div class="modal">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="send-form" action="https://echo.htmlacademy.ru/" method="post">
 
+            <div class="form-label">
+              <div class="field-group-wrapper">
+
+
+                <div class="field-group">
+                  <div class="name-form-wrapper">
+                    <label class="name-form" for="name-input">Ваше имя:</label>
+
+                  <div class="field-name-wrapper">
+                    <input class="field-name" type="text" id="name-input" name="name-input" value="Введите имя"
+                      placeholder="Введите имя">
+                  </div>
+                </div>
+                </div>
+
+                <div class="field-group">
+                  <div class="email-wrapper">
+                      <label class="email-form" for="email-input">Ваш e-mail:</label>
+
+                    <div class="field-email-wrapper">
+                      <input class="field-email" type="email" id="email-input" name="email-input"
+                        value="почта" placeholder="Введите e-mail">
+                    </div>
+                    <span class="error-message">Забавный у вас адрес</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="delivery-info-wrapper">
+                <div class="delivery">
+                  <label class="delivery-form" for="delivery-info">Что нужно привезти:</label>
+                  <div class="delivery-form-info">
+                    <input class="field-info" type="text" id="delivery-info" name="info-input" value="В свободной форме" placeholder="Укажите, что вам привезти">
+                  </div>
+                </div>
+                <div class="quantity-form-wrapper">
+                  <label class="quantity-form" for="quantity-childs">Количество:</label>
+
+                  <div class="quantity-buttons">
+                    <button class="minus" type="button"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="2"
+                        fill="currentColor" viewBox="0 0 14 2">
+                        <path d="M0 0v2h14V0H0Z" />
+                      </svg>
+                    </button>
+                    <input class="field-quantity" type="text" id="quantity-childs" name="quantity-childs" value="2">
+                    <button class="plus" type="button"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                        fill="currentColor" viewBox="0 0 14 14">
+                        <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="tooltip">
+                    <span class="tooltip-toggle">
+                    </span>
+                    <div class="tooltip-text" role="tooltip" id="tooltip-label-delivery">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                      к провозу багажа.
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <button class="button send-form-button" type="submit">Отправить</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
 
 
   </body>

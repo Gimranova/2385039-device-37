@@ -368,6 +368,13 @@ body {
   line-height: 30px;
 }
 
+
+
+
+
+
+
+
 .main-navigation-wrapper {
   display: flex;
   margin: 0;
@@ -1991,7 +1998,7 @@ body {
   border: none;
   margin: 0;
   padding: 0;
-
+  margin-top: 35px;
   outline: 1px solid red;
   outline-offset: -1px;
 }
@@ -2004,7 +2011,8 @@ body {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.36px;
-  margin-bottom: 20px;
+  padding-top: 12px;
+
 }
 
 .range-scale {
@@ -2012,6 +2020,7 @@ body {
   position: relative;
   height: 2px;
   margin-bottom: 16px;
+  margin-top: 20px;
   background-color: #DCDCDC;
   border-radius: 2px;
 }
@@ -2054,7 +2063,9 @@ body {
 
 .range-wrapper-inputs {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  width: 200px;
+  margin-left: -11px;
 }
 
 .catalog-filter-label {
@@ -2066,6 +2077,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  margin-right: 63px;
 }
 
 .range-input {
@@ -2098,15 +2110,22 @@ body {
 }
 
 
+
 .control-mark {
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 0;
   left: 0;
   width: 22px;
   height: 22px;
   border-radius: 3px;
-  border: 2px solid #000;
+  border: 2px solid #CCCCCC;
   box-sizing: border-box;
+}
+
+.control-mark-checked {
+  border-color: #000000;
 }
 
 .control:hover .control-mark {
@@ -2132,6 +2151,7 @@ body {
 
 
 
+
 .control-input[type="radio"] + .control-mark {
   border-radius: 50%;
 
@@ -2140,14 +2160,16 @@ body {
 
 .control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 8px;
-  height: 8px;
-  background-color: #242424;
-  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
   content: "";
+  background: url(../images/catalog/radio.svg) no-repeat;
 }
+
+
+
 
 .control-label {
   color: #000;
@@ -2166,16 +2188,14 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  padding-top: 20px;
+
 
   outline: 1px solid red;
   outline-offset: -1px;
 
 }
 
-.catalog-filter-item {
-
-  text-decoration: none;
-}
 
 .catalog-filter-item:not(:last-child) {
   margin-bottom: 17px;
@@ -2506,4 +2526,395 @@ body {
 
   outline: 1px solid red;
   outline-offset: -1px;
+}
+
+
+/* Модальное окно */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+          outline: 1px solid red;
+          outline-offset: -1px;
+}
+
+.modal {
+  margin: 0 auto;
+  padding: 0;
+  background: #FFFFFF;
+  position: relative;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 95px;
+  right: 90px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  background-image: url(../images/modal/icon-close.svg);
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+  border: none;
+  background-position: center;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+
+.modal-content {
+  margin: 0;
+  padding: 72px 80px;
+  border: 10px solid #000;
+  background: #FFF;
+  box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.10);
+  width: 940px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.modal-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 42px;
+  color: #000;
+  font-family: "Raleway";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 50px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.field-group-wrapper {
+  width: 760px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  justify-content: space-between;
+  margin-bottom: 42px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+
+
+.name-form,
+.email-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14px;
+  color: #000;
+  font-family: "Rubik";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+
+}
+
+.field-name {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  appearance: none;
+  border: none;
+  background-color: #F0F0F0;
+  background-image: url(../images/modal/icons-name.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  display: flex;
+  width: 360px;
+  margin: 0;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  }
+
+
+
+.field-email {
+  color: #000;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  appearance: none;
+  border: 2px solid #FF3D3D;
+  background-color: #F0F0F0;
+  background-image: url(../images/modal/icon-email.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  display: flex;
+  width: 360px;
+  margin: 0;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  }
+
+
+.error-message {
+  color: #FF3D3D;
+  font-family: "Rubik";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+
+
+
+
+
+.delivery-info-wrapper {
+  width: 760px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 540px 180px;
+  justify-content: space-between;
+  margin-bottom: 42px;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.delivery-form,
+.quantity-form {
+  color: #000;
+  font-family: "Rubik";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 14px;
+}
+
+.quantity-form-wrapper {
+  position: relative;
+}
+
+
+.field-info {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  appearance: none;
+  border: none;
+  background-color: #F0F0F0;
+  width: 540px;
+  margin: 0;
+  padding: 20px;
+}
+
+
+.quantity-buttons {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  width: 180px;
+  margin: 0;
+  padding: 0;
+  background-color: #F0F0F0;
+}
+
+.field-quantity {
+  font: inherit;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(242, 242, 242, 1);
+  text-align: center;
+}
+
+.minus,
+.plus {
+  width: 40px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+.minus:hover,
+.plus:hover,
+.field-quantity:hover {
+  color: rgba(0, 0, 0, 1);
+
+}
+
+.minus:focus,
+.plus:focus,
+.field-quantity:focus,
+.minus:focus-visible,
+.plus:focus-visible,
+.field-quantity:focus-visible {
+  color: rgba(0, 0, 0, 1);
+  outline: none;
+}
+
+
+.minus:active,
+.plus:active,
+.field-quantity:active {
+  color: rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+
+.tooltip {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #FFE17F;
+  background-image: url(../images/modal/icon-info.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 120px;
+  top: -3px;
+
+
+}
+
+.tooltip-text {
+  background: #000;
+  box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.10);
+  text-transform: none;
+  width: 200px;
+  padding: 19px 17px;
+
+  position: absolute;
+  right: -39px;
+  top: 36px;
+  display: none;
+
+  color: #FFF;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.tooltip-text::before {
+  background: url(../images/modal/triangle.svg) no-repeat;
+  width: 14px;
+  height: 6px;
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 45px;
+
+
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  z-index: 1000;
+  display: block;
+}
+
+.send-form-button {
+  border: none;
+  width: 191px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.send-form-button::before {
+  width: 220px;
+  height: 8px;
+  color: #FFE17F;
+  content: "";
+  position: absolute;
+  top: -6px;
+  z-index: 0;
 }
