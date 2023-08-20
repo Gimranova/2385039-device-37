@@ -39,19 +39,32 @@
                 <li class="navigation-choice-item  navigation-item-simile">
                   <a class="navigation-choice-link" href="#">Сравнить</a>
                 </li>
-                <li class="navigation-choice-item  navigation-item-car">
+                <li class="navigation-choice-item  navigation-item-cart">
                   <a class="navigation-choice-link" href="#">Корзина</a>
                 </li>
               </ul>
             </nav>
           </div>
 
-          <div class="tooltip">
-            <span class="tooltip-toggle">
+          <div class="tooltip-wrapper">
+            <span class="tooltip-toggle-cart">
             </span>
-            <div class="tooltip-text" role="tooltip" id="tooltip-label-quantity">Укажите количество детей,
-              которые
-              будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+            <div class="tooltip-cart" role="tooltip" id="tooltip-label-cart">
+              <div class="tooltip-cart-list">
+                <img class="tooltip-list-image" width="39" height="43" src="./images/tooltip-cart/product-1-small.svg"
+                  alt="Фото любительской селфи-палки.">
+                <p class="tooltip-list-product">Любительская селфи-палка</p>
+              </div>
+              <div class="tooltip-cart-list">
+                <img class="tooltip-list-image" width="39" height="43" src="./images/tooltip-cart/product-2-small.svg"
+                  alt="Фото профессиональной селфи-палки.">
+                <p class="tooltip-list-product">Профессиональная селфи-палка</p>
+              </div>
+              <div class="tooltip-list-total-wrapper">
+                <span class="tooltip-list-total">Товаров: 2</span>
+                <span class="tooltip-list-total">Сумма: 2000 ₽</span>
+              </div>
+              <button class="button button-open-cart" type="button">Открыть корзину</button>
             </div>
           </div>
 
