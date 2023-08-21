@@ -402,13 +402,20 @@ body {
 .tooltip-cart::before {
   content: "";
   position: absolute;
-  background-image: url(../images/tooltip-cart/triangle.svg);
-  background-repeat: no-repeat;
-  width: 14px;
-  height: 6px;
-  top: -6px;
-  left: 50%;
+
+  top: -20px;
+  left: 150px;
+
+  border: 14px solid transparent;
+  border-bottom: 10px solid #000000;
+
+  display: inline-block;
+
+
+
 }
+
+
 
 .tooltip-toggle-cart:hover + .tooltip-cart,
 .tooltip-toggle-cart:focus + .tooltip-cart {
@@ -597,8 +604,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 1160px;
-  min-height: 560px;
-  margin-bottom: 70px;
   position: relative;
 
   outline: 1px solid red;
@@ -737,13 +742,19 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0;
+  margin-top: -11px;
   padding: 0;
   list-style-type: none;
-
+  cursor: pointer;
+  position: absolute;
+  left: 910px;
 
   outline: 1px solid red;
   outline-offset: -1px;
 }
+
+
+
 
 
 .slider-pagination-button {
@@ -756,7 +767,9 @@ body {
   border-radius: 50%;
   cursor: pointer;
   text-align: center;
-  position: absolute;
+  display: block;
+
+
 
 
 }
@@ -777,13 +790,14 @@ body {
 
 .promotion-list {
   width: 560px;
+  max-height: 401px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   margin: 0;
   padding: 0;
   margin-top: -27px;
-  padding-bottom: 38px;
+  margin-bottom: 38px;
   align-items: start;
   z-index: 1;
 
@@ -890,7 +904,6 @@ body {
   line-height: 30px;
   margin: 0;
   padding: 0;
-  margin-bottom: 12px;
   margin-right: 20px;
   display: flex;
   min-width: 155px;
@@ -900,7 +913,7 @@ body {
 }
 
 .directory-section {
-  margin: 0 auto;
+  margin: 70px auto;
   padding: 0;
   width: 1160px;
 }
@@ -916,10 +929,9 @@ body {
 
 .directory-section-container {
   display: grid;
-  gap: 32px;
+  gap: 33px;
   margin: 0;
   padding: 0;
-  margin-bottom: 70px;
   width: 160px;
 
   outline: 1px solid red;
@@ -953,6 +965,7 @@ body {
   text-decoration: none;
   list-style-type: none;
   width: 160px;
+  height: 60px;
 
   outline: 1px solid red;
   outline-offset: -1px;
@@ -2683,11 +2696,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 
-          outline: 1px solid red;
-          outline-offset: -1px;
+  outline: 1px solid red;
+  outline-offset: -1px;
 }
 
 .modal {
@@ -2771,10 +2784,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 14px;
   color: #000;
   font-family: "Rubik";
@@ -2806,7 +2819,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  }
+}
 
 
 
@@ -2830,7 +2843,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  }
+}
 
 
 .error-message {
@@ -2944,20 +2957,20 @@ body {
   border: none;
   cursor: pointer;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-          outline: 1px solid red;
-          outline-offset: -1px;
+  outline: 1px solid red;
+  outline-offset: -1px;
 }
 
 
@@ -3034,7 +3047,8 @@ body {
 }
 
 .tooltip-text::before {
-  border: 14px solid transparent; border-bottom: 10px solid #000000;
+  border: 14px solid transparent;
+  border-bottom: 10px solid #000000;
   content: "";
   display: inline-block;
   position: absolute;
