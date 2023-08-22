@@ -87,7 +87,7 @@ body {
 
 .header-wrapper {
   width: 1160px;
-  height: 325px;
+  min-height: 325px;
   padding: 5px 60px 0 60px;
   margin: 0;
   margin-top: 15px;
@@ -252,8 +252,9 @@ body {
 .navigation-authentication-sign-in {
   margin: 0;
   padding: 0;
-  width: 81px;
+  width: 204px;
   display: flex;
+  justify-content: space-between;
 
   outline: 1px solid red;
   outline-offset: -1px;
@@ -267,6 +268,7 @@ body {
   left: 0;
   top: 10px;
   position: absolute;
+  cursor: pointer;
 
 }
 
@@ -395,7 +397,7 @@ body {
   margin: 0;
   padding: 0 20px;
   position: relative;
-
+  z-index: 2;
   display: none;
 }
 
@@ -409,7 +411,7 @@ body {
   border: 14px solid transparent;
   border-bottom: 10px solid #000000;
 
-  display: inline-block;
+  display: block;
 
 
 
@@ -418,7 +420,8 @@ body {
 
 
 .tooltip-toggle-cart:hover + .tooltip-cart,
-.tooltip-toggle-cart:focus + .tooltip-cart {
+.tooltip-toggle-cart:focus + .tooltip-cart,
+.tooltip-toggle-cart:default + .tooltip-cart {
   display: block;
   z-index: 1000;
 }
@@ -689,6 +692,7 @@ body {
   top: -150px;
   display: block;
 
+
   outline: 1px solid red;
   outline-offset: -1px;
 }
@@ -699,6 +703,7 @@ body {
   padding: 0;
   position: relative;
 
+
 }
 
 .slider-controls {
@@ -707,6 +712,7 @@ body {
   width: 560px;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .slider-button {
@@ -729,11 +735,21 @@ body {
 
 .slider-next {
   transform: rotate(180deg);
+  cursor: pointer;
 
   outline: 1px solid red;
   outline-offset: -1px;
 }
 
+.slider-prev {
+  cursor: pointer;
+}
+
+.slider-button:hover + .slider-prev,
+.slider-button:focus + .slider-prev {
+  opacity: 0.6;
+  cursor: pointer;
+}
 
 .slider-pagination {
   width: 76px;
@@ -1801,7 +1817,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: start;
   width: 444px;
   margin-left: 119px;
   margin-right: 183px;
@@ -1813,6 +1830,10 @@ body {
   margin: 0;
   padding: 0;
 
+}
+
+.footer-navigation-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .footer-navigation-link {
@@ -1895,6 +1916,7 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   width: 150px;
   justify-content: space-between;
 
@@ -1980,13 +2002,64 @@ body {
 }
 
 
+.footer-social-item:hover {
+  background-color: #FFC700;
+  outline: none;
+}
+
+.footer-social-item:active {
+  background-color: #FFC700;
+  opacity: 0.3;
+}
+
+
+.footer-social-tme:focus,
+.footer-social-youtube:focus,
+.footer-social-twitter:focus,
+.footer-social-tme:focus-visible,
+.footer-social-youtube:focus-visible,
+.footer-social-twitter:focus-visible,
+.footer-navigation-link:focus,
+.footer-phone-link:focus,
+.footer-contacts-logo-htmlacademy:focus,
+.footer-navigation-link:focus-visible,
+.footer-phone-link:focus-visible,
+.footer-contacts-logo-htmlacademy:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+
+.footer-navigation-link:hover {
+  text-decoration: underline 2px solid #FFC700;
+  text-underline-offset: 4px;
+}
+
+.footer-navigation-link:active {
+  text-decoration: underline 2px solid #FFC700;
+  text-underline-offset: 4px;
+  opacity: 0.3;
+}
+
+.footer-phone-link:hover {
+  color: #FFC700;
+}
+
+.footer-phone-link:active {
+  color: rgba(255, 199, 0, 0.3);
+}
+
+.footer-contacts-logo-htmlacademy:hover a {
+  color: #FFFFFF;
+}
+
 .main-inner {
   flex-grow: 1;
   padding-left: 140px;
   padding-right: 140px;
   width: 1440px;
+  margin-top: -123px;
   background: linear-gradient(0deg, #F0F0F0 90%, #FFFFFF 0%);
-
+  z-index: 5;
 
 
   outline: 1px solid red;
@@ -2472,6 +2545,7 @@ body {
   outline-offset: -1px;
 }
 
+
 .product-card-new {
   position: relative;
 }
@@ -2494,6 +2568,7 @@ body {
   outline-offset: -1px;
 
 }
+
 
 .product-info-wrapper {
   display: flex;
@@ -2521,6 +2596,7 @@ body {
   width: 360px;
   height: 380px;
   object-fit: cover;
+
 
   outline: 1px solid red;
   outline-offset: -1px;
@@ -2559,6 +2635,36 @@ body {
 
   outline: 1px solid red;
   outline-offset: -1px;
+}
+
+
+.product-card:focus,
+.product-card:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.product-card {
+  position: relative;
+}
+
+.product-card:hover::before {
+  content: "подробнее";
+  border-bottom: 8px solid #FFE17F;
+  position: absolute;
+  top: 170px;
+  left: 70px;
+  width: 220px;
+  z-index: 5;
+  appearance: none;
+  color: #000;
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
 }
 
 /* Пагинация */
@@ -2727,9 +2833,26 @@ body {
   background-color: #FFFFFF;
   border: none;
   background-position: center;
+  cursor: pointer;
 
   outline: 1px solid red;
   outline-offset: -1px;
+}
+
+.modal-close-button:hover {
+  outline: none;
+  opacity: 0.6;
+}
+
+.modal-close-button:active {
+  outline: none;
+  opacity: 0.3;
+
+}
+
+.modal-close-button:focus,
+.modal-close-button:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 
