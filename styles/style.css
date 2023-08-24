@@ -122,6 +122,25 @@ body {
 
 }
 
+.header-logo-link:hover {
+  opacity: 0.6;
+}
+
+.header-logo-link:active {
+  opacity: 0.3;
+}
+
+.header-logo-link:focus,
+.header-logo-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  z-index: 2;
+
+}
+
+
+
+
+
 .search-navigation-wrapper {
   display: grid;
   grid-template-columns: 517px 231px 240px;
@@ -564,6 +583,7 @@ body {
   padding: 0;
 }
 
+
 .main-navigation-list {
   display: flex;
   flex-wrap: wrap;
@@ -762,8 +782,8 @@ body {
   padding: 0;
   list-style-type: none;
   cursor: pointer;
-  position: absolute;
-  left: 910px;
+
+  margin-left: 682px;
 
   outline: 1px solid red;
   outline-offset: -1px;
@@ -944,8 +964,8 @@ body {
 }
 
 .directory-section-container {
-  display: grid;
-  gap: 33px;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   width: 160px;
@@ -953,6 +973,26 @@ body {
   outline: 1px solid red;
   outline-offset: -1px;
 
+}
+
+.index-catalog-link {
+  text-decoration: none;
+  width: 160px;
+  height: 253px;
+}
+
+.index-catalog-link:hover svg {
+  background-color: #FFC700;
+}
+
+.index-catalog-link:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.index-catalog-link:focus,
+.index-catalog-link:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 
@@ -965,12 +1005,13 @@ body {
   background-position: center;
   margin: 0;
   padding: 0;
+  margin-bottom: 32px;
 
   outline: 1px solid red;
   outline-offset: -1px;
 }
 
-.index-catalog-link {
+.index-catalog-item {
   color: #000;
   font-family: "Raleway";
   font-size: 18px;
@@ -1199,23 +1240,32 @@ body {
   justify-content: center;
   position: relative;
   box-sizing: border-box;
+  cursor: pointer;
 
   outline: 1px solid red;
   outline-offset: -1px;
 }
 
-.advantages-slogan-block::before {
-  content: "";
+.advantages-slogan-image {
   position: absolute;
-  background-image: url(../images/advantages/advantages-slogan-decor.svg);
-  background-repeat: no-repeat;
   background-color: #FFE17F;
   background-position: center;
-  width: 125px;
-  height: 100px;
+  width: 47px;
+  height: 31px;
   margin: 0;
   padding: 0;
   left: 0;
+  cursor: pointer;
+  z-index: 50;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.advantages-slogan-block:hover + .advantages-slogan-block::before {
+  cursor: pointer;
+  background-color: #FFC700;
+
 
   outline: 1px solid red;
   outline-offset: -1px;
@@ -1236,6 +1286,32 @@ body {
 
   outline: 1px solid red;
   outline-offset: -1px;
+}
+
+.advantages-slogan-block::after:hover {
+  content: url(../images/advantages/ellipse-decor.svg);
+  position: absolute;
+  background-image: url(../images/advantages/advantages-slogan-decor-i.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  right: 42.5px;
+}
+
+
+.advantages-slogan-block:active {
+  opacity: 0.3;
+
+
+}
+
+.advantages-slogan-block:focus,
+.advantages-slogan-block:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 .advantages-slogan-info {
@@ -1762,19 +1838,35 @@ body {
 .footer-container {
   margin: 0;
   padding: 0 140px;
+  padding-top: 61px;
   width: 1440px;
 }
 
-.footer-logo {
+.footer-logo-link {
   width: 145px;
   height: 36px;
   margin: 0;
   padding: 0;
-  margin-top: 61px;
+
+  cursor: pointer;
 
 
   outline: 1px solid red;
   outline-offset: -1px;
+}
+
+.footer-logo-link:hover {
+  opacity: 0.6;
+}
+
+.footer-logo-link:active {
+  opacity: 0.3;
+}
+
+
+.footer-logo-link:focus,
+.footer-logo-link:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 .footer-navigation-wrapper {
@@ -1985,17 +2077,21 @@ body {
   outline-offset: -1px;
 }
 
-
-.footer-contacts-logo-htmlacademy {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: end;
-  text-align: end;
+.footer-link-container {
   margin: 0;
   padding: 0;
+  width: 115px;
   margin-left: 390px;
   margin-top: 3px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-contacts-logo-htmlacademy {
   color: #FFC700;
+  width: 115px;
+  height: 33px;
+  text-align: center;
 
   outline: 1px solid red;
   outline-offset: -1px;
@@ -2048,8 +2144,12 @@ body {
   color: rgba(255, 199, 0, 0.3);
 }
 
-.footer-contacts-logo-htmlacademy:hover a {
+a.footer-contacts-logo-htmlacademy:hover {
   color: #FFFFFF;
+}
+
+.footer-contacts-logo-htmlacademy:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .main-inner {
@@ -2638,8 +2738,8 @@ body {
 }
 
 
-.product-card:focus,
-.product-card:focus-visible {
+.product-card:focus a,
+.product-card:focus-visible a {
   outline: 2px solid #AF4FFF;
 }
 
@@ -2782,12 +2882,67 @@ body {
 }
 
 .pagination-current {
-  color: #444444;
+  color: rgba(68, 68, 68, 0.6);
 
   outline: 1px solid red;
   outline-offset: -1px;
 }
 
+.pagination-back:default,
+.pagination-forward:default {
+  color: #000000;
+  background-color: #EBEBEB;
+}
+
+.pagination-back:disabled,
+.pagination-forward:disabled {
+  color: rgba(68, 68, 68, 0.3);
+  background-color: #EBEBEB;
+}
+
+.pagination-back:hover,
+.pagination-forward:hover {
+  background-color: #DCDCDC;
+  color: #000000;
+}
+
+.pagination-back:active,
+.pagination-forward:active {
+  background-color: #DCDCDC;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.pagination-back:focus,
+.pagination-back:focus-visible,
+.pagination-forward:focus,
+.pagination-forward:focus-visible {
+  background-color: #F0F0F0;
+  color: #000000;
+  outline: 2px solid #AF4FFF;
+}
+
+.pagination-link:hover {
+  color: #444444;
+}
+
+.pagination-link:active {
+  color: rgba(68, 68, 68, 0.1);
+}
+
+.pagination-link:focus,
+.pagination-link:focus-visible {
+  color: rgba(68, 68, 68, 0.3);
+  outline: 2px solid #AF4FFF;
+}
+
+.pagination-current:hover,
+.pagination-current:active,
+.pagination-current:focus,
+.pagination-current:focus-visible {
+  color: rgba(68, 68, 68, 0.6);
+  outline: none;
+}
 
 /* Модальное окно */
 .modal-container {
