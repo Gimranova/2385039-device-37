@@ -72,49 +72,75 @@
               <button class="button button-open-cart" type="button">Открыть корзину</button>
             </div>
           </div>
-
         </div>
 
-        <div class="main-navigation-wrapper">
-          <div class="navigation-catalog">
-            <a class="navigation-catalog-link" href="#">Каталог товаров</a>
-            <div class="inserted-catalog" style="display: block;">
-              <ol class="inserted-catalog-list">
-                <li class="inserted-catalog-item">Виртуальная реальность</li>
-                <li class="inserted-catalog-item">Моноподы для cелфи</li>
-                <li class="inserted-catalog-item">Экшн-камеры</li>
-              </ol>
-              <ol class="inserted-catalog-list">
-                <li class="inserted-catalog-item">Фитнес-браслеты</li>
-                <li class="inserted-catalog-item">Умные часы</li>
-              </ol>
-              <ol class="inserted-catalog-list">
-                <li class="inserted-catalog-item">Квадрокоптеры</li>
-              </ol>
-            </div>
-          </div>
-          <nav class="main-navigation">
-            <ul class="main-navigation-list">
-              <li class="main-navigation-item main-navigation-item-active">
-                <a class="main-navigation-link" href="#">Доставка</a>
-              </li>
-              <li class="main-navigation-item main-navigation-item-active">
-                <a class="main-navigation-link" href="#">Гарантия</a>
-              </li>
-              <li class="main-navigation-item main-navigation-item-active">
-                <a class="main-navigation-link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="main-navigation">
+          <ul class="navigation-catalog">
+            <li class="navigation-catalog-item">
+              <label class="navigation-header-catalog" for="subcatalog-product">Каталог товаров</label>
+              <input class="visually-hidden subcatalog-catalog-checkbox" id="subcatalog-product" type="checkbox">
+              <ul class="subcatalog-catalog">
+                <li class="subcatalog-list-first">
+                  <ol class="subcatalog-catalog-list">
+                    <li class="subcatalog-catalog-item">
+                      <a class="subcatalog-catalog-link" href="#">
+                        Виртуальная реальность
+                      </a>
+                    </li>
+                    <li class="subcatalog-catalog-item">
+                      <a class="subcatalog-catalog-link" href="#">
+                        Моноподы для cелфи
+                      </a>
+                    </li>
+                    <li class="subcatalog-catalog-item">
+                      <a class="subcatalog-catalog-link" href="#">
+                        Экшн-камеры
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+                <li class="subcatalog-list-second">
+                  <ol class="subcatalog-catalog-list">
+                    <li class="subcatalog-catalog-item">
+                      <a class="subcatalog-catalog-link" href="#">
+                        Фитнес-браслеты
+                      </a>
+                    </li>
+                    <li class="subcatalog-catalog-item">
+                      <a class="subcatalog-catalog-link" href="#">
+                        Умные часы
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+                <li class="subcatalog-list-third">
+                  <ol class="subcatalog-catalog-list">
+                    <li class="subcatalog-catalog-item">
+                      <a class="subcatalog-catalog-link" href="#">
+                        Квадрокоптеры
+                      </a>
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation-catalog-item">
+              <a class="main-navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="navigation-catalog-item">
+              <a class="main-navigation-link" href="#">Гарантия</a>
+            </li>
+            <li class="navigation-catalog-item">
+              <a class="main-navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main class="main-container">
-
       <section class="promotion-section">
         <h2 class="visually-hidden">Рекламные слайды товаров.</h2>
-
         <div class="promotion-slider-wrapper">
           <div class="promotion-slider">
             <img class="promotion-slider-image" src="./images/promotion-images/promotion-slider-1.png" width="560"

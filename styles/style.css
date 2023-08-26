@@ -521,46 +521,40 @@ body {
   background-color: #FFF;
 }
 
-.main-navigation-wrapper {
+/* Каталог товаров с подкаталогом*/
+.main-navigation {
   display: flex;
+  align-items: center;
+  width: 1040px;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   margin-top: 30px;
+
 }
 
 .navigation-catalog {
+  display: flex;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 293px;
-  height: 50px;
-  margin-right: 276px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  align-items: center;
+  width: 100%;
+
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.navigation-catalog-item {
   position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
-.navigation-catalog::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  background: url(../images/header/plus.svg) no-repeat center;
-  right: 7px;
-  top: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+.navigation-catalog-item:first-child {
 
 }
 
-.navigation-catalog-link {
-  text-decoration: none;
-  color: #000;
+.navigation-header-catalog {
   font-family: "Raleway";
   font-size: 18px;
   font-style: normal;
@@ -568,35 +562,82 @@ body {
   line-height: normal;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-.main-navigation {
-  margin: 0;
-  padding: 0;
-}
-
-.main-navigation-item {
-  margin: 0;
-  padding: 0;
-}
-
-
-.main-navigation-list {
+  color: #000000;
+  cursor: pointer;
   display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  text-align: center;
-  justify-content: space-between;
-  width: 471px;
-  height: 21px;
+  align-items: center;
+  position: relative;
+  width: 236px;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navigation-header-catalog::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background: url(../images/header/plus.svg) no-repeat center;
+  left: 243px;
+  top: 0;
+  display: inline-block;
+  cursor: pointer;
   margin: 0;
   padding: 0;
-  margin-bottom: 14px;
-  margin-top: 15px;
+  margin-left: 7px;
+
 }
+
+
+.subcatalog-catalog-checkbox:checked~.subcatalog-catalog {
+  position: absolute;
+  display: flex;
+  margin: 0;
+  padding: 33px 60px 27px 60px;
+  width: 1160px;
+  margin-left: 0;
+  list-style-type: none;
+  background-color: #ffe17f;
+  left: -60px;
+  top: 45px;
+  z-index: 2;
+  min-height: 180px;
+
+}
+
+.subcatalog-catalog-checkbox:checked+.navigation-header-catalog::before {
+  background: url(../images/header/minus.svg) no-repeat center;
+  border: none;
+}
+
+.subcatalog-catalog,
+.subcatalog-catalog-list {
+  list-style-type: none;
+}
+
+.subcatalog-catalog {
+  display: none;
+}
+
+.subcatalog-catalog-link {
+  text-decoration: none;
+  color: #000;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.navigation-catalog-item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
 
 
 .main-navigation-link {
@@ -611,6 +652,9 @@ body {
   text-transform: uppercase;
 }
 
+
+
+/* Промоушн слайды*/
 .main-container {
   margin: 0 auto;
   padding: 0;
@@ -812,6 +856,7 @@ body {
 
 .slider-pagination-button:hover {
   background-color: #af7842;
+  transition: background-color 1s ease-in-out;
 }
 
 .slider-pagination-button:focus {
@@ -906,6 +951,32 @@ body {
   appearance: none;
 }
 
+.promotion-details:hover {
+  background-color: #FFE17F;
+  transition: background-color 1s ease-in-out;
+}
+
+.promotion-details:active::after {
+  background-color: #FFCC33;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  z-index: -1;
+  outline: none;
+}
+
+.promotion-details:focus,
+.promotion-details:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.promotion-details:disabled {
+  opacity: 0.3;
+}
+
 .details-argument-wrapper {
   display: flex;
   margin: 0;
@@ -983,6 +1054,7 @@ body {
 
 .index-catalog-link:hover svg {
   background-color: #FFC700;
+  transition: background-color 1s ease-in-out;
 }
 
 .index-catalog-link:active {
@@ -1265,6 +1337,7 @@ body {
 .advantages-slogan-block:hover + .advantages-slogan-block::before {
   cursor: pointer;
   background-color: #FFC700;
+  transition: background-color 1s ease-in-out;
 
 
   outline: 1px solid red;
@@ -1300,6 +1373,7 @@ body {
   margin: 0;
   padding: 0;
   right: 42.5px;
+  transition: background-color 1s ease-in-out;
 }
 
 
@@ -1504,6 +1578,33 @@ body {
   z-index: -1;
 }
 
+.about-detail-wrapper:hover {
+  background-color: #FFE17F;
+  transition: background-color 1s ease-in-out;
+}
+
+.about-detail-wrapper:active::after {
+  background-color: #FFCC33;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+  z-index: -1;
+  outline: none;
+}
+
+.about-detail-wrapper:focus,
+.about-detail-wrapper:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.about-detail-wrapper:disabled {
+  opacity: 0.3;
+}
+
+
 .contacts-about-detail {
   margin: 0;
   padding: 10px 6.14px;
@@ -1649,6 +1750,34 @@ body {
   appearance: none;
 }
 
+
+.message-link-wrapper:hover {
+  background-color: #FFE17F;
+  transition: background-color 1s ease-in-out;
+}
+
+.message-link-wrapper:active::after {
+  background-color: #FFCC33;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 259px;
+  z-index: -1;
+  outline: none;
+}
+
+.message-link-wrapper:focus,
+.message-link-wrapper:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.message-link-wrapper:disabled {
+  opacity: 0.3;
+}
+
+
 .message-link {
   margin: 0;
   padding: 10px 0;
@@ -1789,6 +1918,25 @@ body {
   text-transform: uppercase;
   border: 3px solid #C4C4C4;
   box-sizing: border-box;
+}
+
+.button-subscribe:hover {
+  background-color: #000;
+  transition: background-color 1s ease-in-out;
+  border: 3px solid #000;
+  color: #FFFFFF;
+
+}
+
+.button-subscribe:active {
+  border: 3px solid #000;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-subscribe:focus,
+.button-subscribe:focus-visible {
+  border: 2px solid #AF4FFF;
 }
 
 .subscribe-reason {
@@ -2101,6 +2249,7 @@ body {
 .footer-social-item:hover {
   background-color: #FFC700;
   outline: none;
+  transition: background-color 1s ease-in-out;
 }
 
 .footer-social-item:active {
@@ -2347,6 +2496,8 @@ a.footer-contacts-logo-htmlacademy:hover {
 
 .range-toggle:hover {
   background-color: #dbb590;
+  transition: background-color 1s ease-in-out;
+
 }
 
 .range-toggle:active,
@@ -2434,10 +2585,12 @@ a.footer-contacts-logo-htmlacademy:hover {
 
 .control:hover .control-mark {
   border-color: #814b18;
+  transition: background-color 1s ease-in-out;
 }
 
 .control-input:disabled + .control-mark {
   border-color: #242424;
+  transition: background-color 1s ease-in-out;
 }
 
 
@@ -2537,6 +2690,32 @@ a.footer-contacts-logo-htmlacademy:hover {
   appearance: none;
 }
 
+.button-filter-show:hover {
+  background-color: #FFE17F;
+  transition: background-color 1s ease-in-out;
+}
+
+.button-filter-show:active::after {
+  background-color: #FFCC33;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  z-index: -1;
+  outline: none;
+}
+
+.button-filter-show:focus,
+.button-filter-show:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.button-filter-show:disabled {
+  opacity: 0.3;
+}
+
 .catalog-right-column {
   width: 840px;
   margin: 0;
@@ -2607,24 +2786,39 @@ a.footer-contacts-logo-htmlacademy:hover {
   outline-offset: -1px;
 }
 
-.button-up {
+.button-up,
+.button-down {
   width: 30px;
   height: 30px;
-  background: url(../images/sorting/button-up.svg) no-repeat;
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   outline: 1px solid red;
   outline-offset: -1px;
 }
 
-.button-down {
-  width: 30px;
-  height: 30px;
-  background: url(../images/sorting/button-down.svg) no-repeat;
-  background-position: center;
+.button-up-icon,
+.button-down-icon {
+  color: rgba(0, 0, 0, 0.2);
+}
 
-  outline: 1px solid red;
-  outline-offset: -1px;
+
+
+.button-up:hover .button-up-icon,
+.button-down:hover .button-down-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.button-up:active .button-up-icon,
+.button-down:active .button-down-icon {
+  color: #000000;
+}
+
+
+.button-up:focus,
+.button-down:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 
@@ -2747,25 +2941,22 @@ a.footer-contacts-logo-htmlacademy:hover {
   position: relative;
 }
 
-.product-card:hover::before {
-  content: "подробнее";
-  border-bottom: 8px solid #FFE17F;
+.product-card:hover::before  {
+  content: "";
+  background-image: url(../images/catalog/button-more.svg);
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 40px;
+  outline: none;
+
   position: absolute;
   top: 170px;
   left: 70px;
-  width: 220px;
-  z-index: 5;
+
   appearance: none;
-  color: #000;
-  text-align: center;
-  font-family: "Raleway";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: 3.6px;
-  text-transform: uppercase;
+
 }
+
 
 /* Пагинация */
 .pagination-container {
@@ -2799,6 +2990,25 @@ a.footer-contacts-logo-htmlacademy:hover {
   outline: 1px solid red;
   outline-offset: -1px;
 }
+
+.button-download-more:hover {
+  outline: 3px solid #000;
+}
+
+.button-download-more:active {
+  outline: 3px solid #000;
+  opacity: 0.3;
+}
+
+.button-download-more:focus,
+.button-download-more:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.button-download-more:disabled {
+  opacity: 0.3;
+}
+
 
 .pagination-navigation-container {
   display: grid;
@@ -2988,7 +3198,7 @@ a.footer-contacts-logo-htmlacademy:hover {
   background-color: #FFFFFF;
   border: none;
   background-position: center;
-  cursor: pointer;
+
 
   outline: 1px solid red;
   outline-offset: -1px;
