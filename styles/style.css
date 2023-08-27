@@ -24,9 +24,6 @@
 
 html {
   height: 100%;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 *,
@@ -42,15 +39,7 @@ body {
   flex-wrap: wrap;
   min-height: 100%;
   width: 1440px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
-
-
-
-
 
 .visually-hidden {
   position: absolute;
@@ -69,18 +58,10 @@ body {
   cursor: pointer;
 }
 
-/*.button:disabled {
-  background-color: #e5e5e5;
-  color: #ffffff;
-}*/
 
 .header {
   margin: 0 auto;
   width: 1160px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 
 }
 
@@ -93,10 +74,6 @@ body {
   margin-top: 15px;
   position: relative;
   background: linear-gradient(0deg, #FFE17F 92%, #FFFFFF 0%);
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -116,10 +93,6 @@ body {
   object-fit: contain;
   margin: 0;
   padding: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .header-logo-link:hover {
@@ -134,11 +107,7 @@ body {
 .header-logo-link:focus-visible {
   outline: 2px solid #AF4FFF;
   z-index: 2;
-
 }
-
-
-
 
 
 .search-navigation-wrapper {
@@ -150,10 +119,6 @@ body {
   padding: 0;
   margin-top: 30px;
   align-items: center;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .search-form {
@@ -163,9 +128,6 @@ body {
   padding: 0;
   display: flex;
   position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .input-search-info {
@@ -182,7 +144,6 @@ body {
   font-weight: 400;
   line-height: 20px;
   background-color: #FFE17F;
-
 }
 
 .input-search-info::placeholder {
@@ -198,9 +159,6 @@ body {
   top: 12px;
   left: 16px;
   background: url(../images/header/search-icon.svg) no-repeat;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .button-search {
@@ -225,23 +183,17 @@ body {
   margin: 0;
   padding: 0;
   width: 231px;
-
 }
 
 .navigation-authentication {
   margin: 0;
   padding: 0;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .navigation-authentication-list {
   margin: 0;
   padding: 0;
 }
-
 
 
 .navigation-authentication-item {
@@ -251,6 +203,7 @@ body {
   padding-left: 27px;
   width: 231px;
   position: relative;
+  display: flex;
 }
 
 .navigation-authentication-link {
@@ -261,9 +214,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -271,12 +221,7 @@ body {
 .navigation-authentication-sign-in {
   margin: 0;
   padding: 0;
-  width: 204px;
-  display: flex;
-  justify-content: space-between;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+  padding-right: 25px;
 }
 
 .navigation-authentication-item::before {
@@ -285,20 +230,22 @@ body {
   width: 15px;
   height: 12px;
   left: 0;
-  top: 10px;
+  top: 8px;
   position: absolute;
   cursor: pointer;
-
 }
 
-
+.navigation-sign-out {
+  margin: 0;
+  padding: 0;
+  width: 56px;
+  color: rgba(0, 0, 0, 0.3);
+}
 
 .navigation-choice-wrapper {
   margin: 0;
   padding: 0;
   width: 240px;
-
-
 }
 
 .navigation-choice {
@@ -310,14 +257,11 @@ body {
   grid-template-columns: 105px 99px;
   column-gap: 36px;
   justify-items: end;
-
 }
 
 .navigation-choice-item {
   margin: 0;
   padding: 0;
-
-
 }
 
 .navigation-item-cart {
@@ -347,10 +291,6 @@ body {
   right: 164px;
   bottom: 14px;
   display: block;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .tooltip-toggle-cart::before {
@@ -365,8 +305,6 @@ body {
   line-height: normal;
   top: 3px;
   right: 6px;
-
-
 }
 
 .navigation-item-simile {
@@ -423,17 +361,11 @@ body {
 .tooltip-cart::before {
   content: "";
   position: absolute;
-
   top: -20px;
   left: 150px;
-
   border: 14px solid transparent;
   border-bottom: 10px solid #000000;
-
   display: block;
-
-
-
 }
 
 
@@ -474,7 +406,6 @@ body {
   font-weight: 400;
   line-height: 20px;
   max-width: 170px;
-
 }
 
 .tooltip-list-image {
@@ -522,7 +453,7 @@ body {
 }
 
 /* Каталог товаров с подкаталогом*/
-.main-navigation {
+.header-navigation-wrapper {
   display: flex;
   align-items: center;
   width: 1040px;
@@ -530,31 +461,16 @@ body {
   margin: 0;
   padding: 0;
   margin-top: 30px;
-
 }
 
-.navigation-catalog {
-  display: flex;
-  list-style-type: none;
+.catalog-header-wrapper {
   margin: 0;
   padding: 0;
-  align-items: center;
-  width: 100%;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-.navigation-catalog-item {
   position: relative;
 }
 
-.navigation-catalog-item:first-child {
 
-}
-
-.navigation-header-catalog {
+.catalog-header {
   font-family: "Raleway";
   font-size: 18px;
   font-style: normal;
@@ -567,13 +483,14 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  width: 236px;
+  width: 293px;
+  height: 50px;
   margin: 0;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-.navigation-header-catalog::before {
+.catalog-header::before {
   content: "";
   position: absolute;
   width: 50px;
@@ -583,13 +500,14 @@ body {
   background: url(../images/header/plus.svg) no-repeat center;
   left: 243px;
   top: 0;
-  display: inline-block;
   cursor: pointer;
   margin: 0;
   padding: 0;
-  margin-left: 7px;
-
+  padding-left: 7px;
+  display: block;
+  z-index: 10;
 }
+
 
 
 .subcatalog-catalog-checkbox:checked~.subcatalog-catalog {
@@ -602,24 +520,53 @@ body {
   list-style-type: none;
   background-color: #ffe17f;
   left: -60px;
-  top: 45px;
+  top: 35px;
   z-index: 2;
   min-height: 180px;
-
 }
 
-.subcatalog-catalog-checkbox:checked+.navigation-header-catalog::before {
+.subcatalog-catalog-checkbox:checked + .catalog-header::before:checked {
   background: url(../images/header/minus.svg) no-repeat center;
-  border: none;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 243px;
+  top: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  margin-left: 7px;
 }
 
 .subcatalog-catalog,
 .subcatalog-catalog-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .subcatalog-catalog {
   display: none;
+}
+
+.subcatalog-list-first {
+  width: 222px;
+  margin-right: 30px;
+}
+
+.subcatalog-list-second {
+  width: 211px;
+  margin-right: 1px;
+}
+
+.subcatalog-catalog-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 30px;
 }
 
 .subcatalog-catalog-link {
@@ -632,13 +579,27 @@ body {
   line-height: 18px;
 }
 
-.navigation-catalog-item {
+/* Доставка Гарантия Контакты */
+.main-navigation {
   margin: 0;
   padding: 0;
-  position: relative;
 }
 
+.navigation-catalog {
+  display: grid;
+  grid-template-columns: 125px 121px 127px;
+  column-gap: 45px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  width: 471px;
+  justify-content: space-between;
+}
 
+.navigation-catalog-item {
+  position: relative;
+}
 
 .main-navigation-link {
   text-decoration: none;
@@ -659,7 +620,6 @@ body {
   margin: 0 auto;
   padding: 0;
   flex-grow: 1;
-
 }
 
 
@@ -719,9 +679,6 @@ body {
   justify-content: center;
   right: 49px;
   top: -122px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .promotion-slider-wrapper-third::before {
@@ -741,9 +698,6 @@ body {
   justify-content: center;
   right: 49px;
   top: -122px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .promotion-slider-image {
@@ -755,10 +709,6 @@ body {
   z-index: 1;
   top: -150px;
   display: block;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -766,8 +716,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-
-
 }
 
 .slider-controls {
@@ -790,29 +738,39 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 30px;
-
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+  z-index: 5;
 }
 
 .slider-next {
   transform: rotate(180deg);
-  cursor: pointer;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
-.slider-prev {
-  cursor: pointer;
-}
 
-.slider-button:hover + .slider-prev,
-.slider-button:focus + .slider-prev {
+.slider-button:hover {
   opacity: 0.6;
+  outline: none;
+  transition: background-color 300ms ease-in-out;
+}
+
+.slider-button:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.slider-button:focus,
+.slider-button:focus-visible {
+  border: 2px solid #AF4FFF;
+  outline: none;
+}
+
+
+.slider-pagination-wrapper {
+  width: 76px;
+  margin: 0 auto;
+  margin-top: -11px;
   cursor: pointer;
+
+
 }
 
 .slider-pagination {
@@ -822,22 +780,28 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  margin-top: -11px;
   padding: 0;
   list-style-type: none;
   cursor: pointer;
+}
 
-  margin-left: 682px;
+.slider-pagination-item {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
 
-  outline: 1px solid red;
-  outline-offset: -1px;
+.label-radio {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  z-index: 5;
 }
 
 
-
-
-
-.slider-pagination-button {
+.slider-pagination-link {
   width: 12px;
   height: 12px;
   margin: 0;
@@ -846,27 +810,51 @@ body {
   border: 2px solid #000000;
   border-radius: 50%;
   cursor: pointer;
-  text-align: center;
-  display: block;
+  z-index: 5;
+  appearance: none;
+}
 
-
-
+.slider-pagination-link:disabled {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
 
 }
 
-.slider-pagination-button:hover {
-  background-color: #af7842;
-  transition: background-color 1s ease-in-out;
+.slider-pagination-link:hover {
+  background-color: #FFFFFF;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  transition: background-color 300ms ease-in-out;
 }
 
-.slider-pagination-button:focus {
-  background-color: #dbb590;
+.slider-pagination-link:active {
+  background-color: #FFFFFF;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+
+}
+
+
+.slider-pagination-link:focus {
+  border: 2px solid #AF4FFF;
   outline: none;
 }
 
-.slider-pagination-button-current {
-  background-color: #242424;
+.slider-pagination-link:checked {
+  background-color: #000000;
+  cursor: pointer;
 }
+
+
+
+.slider-pagination-link:checked:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 300ms ease-in-out;
+}
+
+.slider-pagination-link:checked:active {
+  background-color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
 
 
 .promotion-list {
@@ -881,9 +869,6 @@ body {
   margin-bottom: 38px;
   align-items: start;
   z-index: 1;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .promotion-slogan {
@@ -895,10 +880,6 @@ body {
   line-height: 50px;
   margin: 0;
   padding: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .promotion-text {
@@ -911,9 +892,6 @@ body {
   margin: 0;
   padding: 0;
   margin-top: 29px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .promotion-details {
@@ -934,16 +912,14 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
   position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .promotion-details::before {
   content: "";
   border-bottom: 8px solid #FFE17F;
   position: absolute;
-  top: 17px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   width: 220px;
   z-index: -1;
@@ -953,19 +929,17 @@ body {
 
 .promotion-details:hover {
   background-color: #FFE17F;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
-.promotion-details:active::after {
+.promotion-details:active {
   background-color: #FFCC33;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 220px;
-  z-index: -1;
   outline: none;
+}
+
+.promotion-details:active::before {
+  border-color: #FFCC33;
+  transition: border-color 300ms ease-in-out;
 }
 
 .promotion-details:focus,
@@ -997,9 +971,6 @@ body {
   margin-right: 20px;
   display: flex;
   min-width: 155px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .details-argument {
@@ -1014,9 +985,6 @@ body {
   margin-right: 20px;
   display: flex;
   min-width: 155px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .directory-section {
@@ -1040,10 +1008,6 @@ body {
   margin: 0;
   padding: 0;
   width: 160px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .index-catalog-link {
@@ -1054,7 +1018,7 @@ body {
 
 .index-catalog-link:hover svg {
   background-color: #FFC700;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .index-catalog-link:active {
@@ -1078,9 +1042,6 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 32px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .index-catalog-item {
@@ -1095,9 +1056,6 @@ body {
   list-style-type: none;
   width: 160px;
   height: 60px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -1337,7 +1295,7 @@ body {
 .advantages-slogan-block:hover + .advantages-slogan-block::before {
   cursor: pointer;
   background-color: #FFC700;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
 
 
   outline: 1px solid red;
@@ -1373,14 +1331,12 @@ body {
   margin: 0;
   padding: 0;
   right: 42.5px;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 
 .advantages-slogan-block:active {
   opacity: 0.3;
-
-
 }
 
 .advantages-slogan-block:focus,
@@ -1414,9 +1370,6 @@ body {
   display: grid;
   grid-template-columns: 520px 532px;
   column-gap: 108px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .contacts-about-info {
@@ -1424,10 +1377,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -1443,9 +1392,6 @@ body {
   line-height: 50px;
   display: flex;
   flex-wrap: wrap;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .delivery-methods-list {
@@ -1455,10 +1401,6 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .contacts-full-info {
@@ -1466,10 +1408,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .contacts-about-info::before,
@@ -1496,9 +1434,6 @@ body {
   padding: 0;
   margin-top: 48px;
   margin-bottom: 30px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .delivery-methods-list {
@@ -1514,7 +1449,6 @@ body {
 .delivery-method {
   margin: 0;
   padding: 0;
-
 }
 
 .delivery-method-link {
@@ -1530,10 +1464,6 @@ body {
   letter-spacing: -0.36px;
   text-decoration: none;
   position: relative;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .delivery-method-link::before {
@@ -1547,10 +1477,6 @@ body {
   top: 6px;
   z-index: 2;
   appearance: none;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .about-detail-wrapper {
@@ -1561,47 +1487,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-.about-detail-wrapper::before {
-  content: "";
-  position: absolute;
-  border-bottom: 8px solid #FFE17F;
-  width: 270px;
-  left: 0;
-  top: 16px;
-  z-index: -1;
-}
-
-.about-detail-wrapper:hover {
-  background-color: #FFE17F;
-  transition: background-color 1s ease-in-out;
-}
-
-.about-detail-wrapper:active::after {
-  background-color: #FFCC33;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 270px;
-  z-index: -1;
-  outline: none;
-}
-
-.about-detail-wrapper:focus,
-.about-detail-wrapper:focus-visible {
-  outline: 2px solid #AF4FFF;
-}
-
-.about-detail-wrapper:disabled {
-  opacity: 0.3;
 }
 
 
@@ -1618,7 +1503,44 @@ body {
   line-height: normal;
   letter-spacing: 3.6px;
   text-transform: uppercase;
+  width: 270px;
+  position: relative;
+}
 
+.contacts-about-detail::before {
+  content: "";
+  position: absolute;
+  border-bottom: 8px solid #FFE17F;
+  width: 270px;
+  left: 0;
+  top: 50%;;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.contacts-about-detail:hover {
+  background-color: #FFE17F;
+  transition: background-color 300ms ease-in-out;
+}
+
+.contacts-about-detail:active {
+  background-color: #FFCC33;
+  outline: none;
+}
+
+.contacts-about-detail:active::before {
+  background-color: #FFCC33;
+  transition: border-color 300ms ease-in-out;
+}
+
+.contacts-about-detail:focus,
+.contacts-about-detail:focus-visible {
+  outline: 2px solid #AF4FFF;
+
+}
+
+.contacts-about-detail:disabled {
+  opacity: 0.3;
 }
 
 .address-title {
@@ -1631,9 +1553,6 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .contacts-address {
@@ -1643,7 +1562,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 532px;
-
 }
 
 .contacts-address-text {
@@ -1655,10 +1573,6 @@ body {
   line-height: 30px;
   margin: 0;
   padding: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .contacts-phone {
@@ -1676,9 +1590,6 @@ body {
   flex-wrap: wrap;
   justify-content: start;
   width: 154px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .worktime-wrapper {
@@ -1688,9 +1599,6 @@ body {
   flex-wrap: wrap;
   width: 204px;
   margin-bottom: 30px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .worktime-title {
@@ -1703,9 +1611,6 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 15px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .worktime-item {
@@ -1721,9 +1626,6 @@ body {
   flex-wrap: wrap;
   justify-content: start;
   width: 204px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .message-link-wrapper {
@@ -1733,48 +1635,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-.message-link-wrapper::before {
-  content: "";
-  border-bottom: 8px solid #FFE17F;
-  position: absolute;
-  top: 16px;
-  left: 0;
-  width: 259px;
-  z-index: -1;
-  appearance: none;
-}
-
-
-.message-link-wrapper:hover {
-  background-color: #FFE17F;
-  transition: background-color 1s ease-in-out;
-}
-
-.message-link-wrapper:active::after {
-  background-color: #FFCC33;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 259px;
-  z-index: -1;
-  outline: none;
-}
-
-.message-link-wrapper:focus,
-.message-link-wrapper:focus-visible {
-  outline: 2px solid #AF4FFF;
-}
-
-.message-link-wrapper:disabled {
-  opacity: 0.3;
 }
 
 
@@ -1792,6 +1652,44 @@ body {
   letter-spacing: 3.6px;
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
+}
+
+.message-link::before {
+  content: "";
+  border-bottom: 8px solid #FFE17F;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 259px;
+  z-index: -1;
+  appearance: none;
+}
+
+
+.message-link:hover {
+  background-color: #FFE17F;
+  transition: background-color 300ms ease-in-out;
+}
+
+.message-link:active {
+  background-color: #FFCC33;
+  outline: none;
+}
+
+.message-link:active::before {
+  border-color: #FFCC33;
+  transition: border-color 300ms ease-in-out;
+}
+
+.message-link:focus,
+.message-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.message-link:disabled {
+  opacity: 0.3;
 }
 
 .subscribe {
@@ -1922,7 +1820,7 @@ body {
 
 .button-subscribe:hover {
   background-color: #000;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
   border: 3px solid #000;
   color: #FFFFFF;
 
@@ -1995,12 +1893,7 @@ body {
   height: 36px;
   margin: 0;
   padding: 0;
-
   cursor: pointer;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .footer-logo-link:hover {
@@ -2024,20 +1917,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
-.contacts-address {
+.contacts-address-footer {
   margin: 0;
   padding: 0;
   width: 239px;
   display: flex;
   flex-wrap: wrap;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .contacts-address-text {
@@ -2049,8 +1936,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-
-
 }
 
 .footer-navigation-list {
@@ -2062,14 +1947,12 @@ body {
   width: 444px;
   margin-left: 119px;
   margin-right: 183px;
-
 }
 
 .footer-navigation-item {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
 }
 
 .footer-navigation-item:not(:last-child) {
@@ -2094,11 +1977,6 @@ body {
   width: 174px;
   display: flex;
   justify-content: start;
-
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .footer-phone-link {
@@ -2113,9 +1991,6 @@ body {
   text-transform: capitalize;
   margin: 0;
   padding: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .footer-social-wrapper {
@@ -2126,11 +2001,6 @@ body {
   display: flex;
   justify-content: end;
   position: relative;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 
@@ -2144,10 +2014,6 @@ body {
   background-color: #FFC700;
   left: 0;
   bottom: 16px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 
@@ -2159,11 +2025,6 @@ body {
   flex-wrap: wrap;
   width: 150px;
   justify-content: space-between;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .footer-social-item {
@@ -2177,9 +2038,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -2191,11 +2049,6 @@ body {
   width: 40px;
   height: 40px;
   text-align: center;
-
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -2206,11 +2059,6 @@ body {
   width: 40px;
   height: 40px;
   text-align: center;
-
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .footer-social-twitter {
@@ -2220,9 +2068,6 @@ body {
   width: 40px;
   height: 40px;
   text-align: center;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .footer-link-container {
@@ -2240,16 +2085,13 @@ body {
   width: 115px;
   height: 33px;
   text-align: center;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
 .footer-social-item:hover {
   background-color: #FFC700;
   outline: none;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .footer-social-item:active {
@@ -2300,6 +2142,8 @@ a.footer-contacts-logo-htmlacademy:hover {
 .footer-contacts-logo-htmlacademy:active {
   color: rgba(255, 255, 255, 0.3);
 }
+
+/* Страница каталога */
 
 .main-inner {
   flex-grow: 1;
@@ -2496,7 +2340,7 @@ a.footer-contacts-logo-htmlacademy:hover {
 
 .range-toggle:hover {
   background-color: #dbb590;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
 
 }
 
@@ -2585,12 +2429,12 @@ a.footer-contacts-logo-htmlacademy:hover {
 
 .control:hover .control-mark {
   border-color: #814b18;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .control-input:disabled + .control-mark {
   border-color: #242424;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 
@@ -2692,7 +2536,7 @@ a.footer-contacts-logo-htmlacademy:hover {
 
 .button-filter-show:hover {
   background-color: #FFE17F;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .button-filter-show:active::after {

@@ -15,7 +15,7 @@
       <h1 class="visually-hidden">Каталог товаров компании Девайс.</h1>
       <div class="header-wrapper">
         <div class="header-logo-wrapper">
-          <a class="header-logo-link">
+          <a class="header-logo-link" href="index.html">
             <img class="header-logo" width="145" height="36" src="./images/logo/header-logo.svg"
               alt="Логотип магазина Девайс.">
           </a>
@@ -31,9 +31,9 @@
             <nav class="navigation-authentication">
               <ul class="navigation-authentication-list">
                 <li class="navigation-authentication-item">
-                  <a class="navigation-authentication-link navigation-authentication-sign-in" href="#">
-                    <span class="navigation-sign-out">Коля Петухов</span>
-                    Выйти
+                  <a class="navigation-authentication-link" href="#">
+                    <span class=" navigation-authentication-sign-in">Коля Петухов</span>
+                    <span class="navigation-sign-out">Выйти</span>
                   </a>
                 </li>
               </ul>
@@ -74,19 +74,64 @@
           </div>
         </div>
 
-        <div class="main-navigation-wrapper">
-          <div class="navigation-catalog">
-            <a class="navigation-catalog-link" href="#">Каталог товаров</a>
+        <div class="header-navigation-wrapper">
+          <div class="catalog-header-wrapper">
+            <label class="catalog-header" for="subcatalog-product">Каталог товаров</label>
+            <input class="visually-hidden subcatalog-catalog-checkbox" id="subcatalog-product" type="checkbox">
+            <ul class="subcatalog-catalog">
+              <li class="subcatalog-list-first">
+                <ol class="subcatalog-catalog-list">
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Виртуальная реальность
+                    </a>
+                  </li>
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Моноподы для cелфи
+                    </a>
+                  </li>
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Экшн-камеры
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li class="subcatalog-list-second">
+                <ol class="subcatalog-catalog-list">
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Фитнес-браслеты
+                    </a>
+                  </li>
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Умные часы
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li class="subcatalog-list-third">
+                <ol class="subcatalog-catalog-list">
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Квадрокоптеры
+                    </a>
+                  </li>
+                </ol>
+              </li>
+            </ul>
           </div>
           <nav class="main-navigation">
-            <ul class="main-navigation-list">
-              <li class="main-navigation-item">
+            <ul class="navigation-catalog">
+              <li class="navigation-catalog-item">
                 <a class="main-navigation-link" href="#">Доставка</a>
               </li>
-              <li class="main-navigation-item">
+              <li class="navigation-catalog-item">
                 <a class="main-navigation-link" href="#">Гарантия</a>
               </li>
-              <li class="main-navigation-item">
+              <li class="navigation-catalog-item">
                 <a class="main-navigation-link" href="#">Контакты</a>
               </li>
             </ul>
@@ -115,10 +160,8 @@
         <h2 class="visually-hidden">Список товаров с фильтрами</h2>
         <div class="catalog-filter-wrapper">
           <h3 class="select-control-title">фильтр:</h3>
-
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость:</legend>
-
             <div class="range">
               <div class="range-scale">
                 <div class="range-bar" style="left: 11px; width: 119px">
@@ -130,7 +173,6 @@
                   </button>
                 </div>
               </div>
-
               <div class="range-wrapper-inputs">
                 <label class="catalog-filter-label">
                   от <input class="range-input" type="number" value="0" name="min-price" style="width: 28px"></label>
@@ -186,14 +228,14 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="visually-hidden control-input" type="radio" name="yes" checked>
-                    <span class="control-label">Есть</span>
+                    <input class="visually-hidden control-input" type="radio" value="yes" checked>
+                    Есть
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="visually-hidden control-input" type="radio" name="none">
-                    <span class="control-label">Нет</span>
+                    <input class="visually-hidden control-input" type="radio" value="none">
+                    Нет
                   </label>
                 </li>
               </ul>
@@ -325,14 +367,14 @@
     <!--Подвал сайта-->
     <footer class="page-footer">
       <div class="footer-container">
-        <a class="footer-logo-link" href="#">
+        <a class="footer-logo-link" href="index.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="145" height="36" fill="none" viewBox="0 0 145 36">
             <path fill="#FFC700"
               d="M27.219 0v35.3h-7.606v-2.4c-1.7 1.9-4.102 3.1-7.505 3.1C5.504 36 0 30.2 0 22.7 0 15.2 5.504 9.4 12.108 9.4c3.403 0 5.904 1.2 7.505 3.1V0h7.606Zm-7.606 22.7c0-3.8-2.501-6.2-6.004-6.2-3.502 0-6.004 2.4-6.004 6.2 0 3.8 2.502 6.2 6.004 6.2 3.503-.1 6.004-2.4 6.004-6.2ZM43.73 29.2c2.102 0 3.803-.8 4.803-1.9l6.105 3.5C52.136 34.2 48.433 36 43.63 36c-8.606 0-14.01-5.8-14.01-13.3 0-7.5 5.404-13.3 13.41-13.3 7.405 0 12.809 5.7 12.809 13.3 0 1.1-.1 2.1-.3 3H37.625c1 2.6 3.302 3.5 6.104 3.5Zm4.603-9.1c-.8-2.9-3.102-4-5.403-4-2.902 0-4.804 1.4-5.504 4h10.907ZM82.156 10.1 72.85 35.3h-8.606l-9.306-25.2h8.405l5.304 16 5.304-16h8.205ZM83.457 10.1h7.606v25.2h-7.606V10.1ZM93.665 22.7c0-7.5 5.703-13.3 13.409-13.3 4.903 0 9.206 2.6 11.408 6.5l-6.605 3.8c-.901-1.8-2.702-2.8-4.903-2.8-3.303 0-5.704 2.4-5.704 5.8 0 3.5 2.401 5.8 5.704 5.8 2.201 0 4.103-1.1 4.903-2.8l6.605 3.8c-2.102 3.9-6.405 6.5-11.408 6.5-7.706 0-13.41-5.8-13.41-13.3ZM132.892 29.2c2.101 0 3.802-.8 4.803-1.9l6.104 3.5c-2.502 3.4-6.204 5.2-11.007 5.2-8.606 0-14.01-5.8-14.01-13.3 0-7.5 5.504-13.3 13.409-13.3C139.596 9.4 145 15.1 145 22.7c0 1.1-.1 2.1-.3 3h-17.913c1.001 2.6 3.303 3.5 6.105 3.5Zm4.703-9.1c-.801-2.9-3.102-4-5.404-4-2.902 0-4.803 1.4-5.504 4h10.908ZM83.457 0v10.1L91.063 0h-7.606Z" />
           </svg>
         </a>
         <div class="footer-navigation-wrapper">
-          <address class="contacts-address">
+          <address class="contacts-address-footer">
             <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.
             </p>
           </address>

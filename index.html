@@ -15,7 +15,7 @@
       <h1 class="visually-hidden">Каталог товаров компании Девайс.</h1>
       <div class="header-wrapper">
         <div class="header-logo-wrapper">
-          <a class="header-logo-link">
+          <a class="header-logo-link" href="#">
             <img class="header-logo" width="145" height="36" src="./images/logo/header-logo.svg"
               alt="Логотип магазина Девайс.">
           </a>
@@ -74,67 +74,69 @@
           </div>
         </div>
 
-        <nav class="main-navigation">
-          <ul class="navigation-catalog">
-            <li class="navigation-catalog-item">
-              <label class="navigation-header-catalog" for="subcatalog-product">Каталог товаров</label>
-              <input class="visually-hidden subcatalog-catalog-checkbox" id="subcatalog-product" type="checkbox">
-              <ul class="subcatalog-catalog">
-                <li class="subcatalog-list-first">
-                  <ol class="subcatalog-catalog-list">
-                    <li class="subcatalog-catalog-item">
-                      <a class="subcatalog-catalog-link" href="#">
-                        Виртуальная реальность
-                      </a>
-                    </li>
-                    <li class="subcatalog-catalog-item">
-                      <a class="subcatalog-catalog-link" href="#">
-                        Моноподы для cелфи
-                      </a>
-                    </li>
-                    <li class="subcatalog-catalog-item">
-                      <a class="subcatalog-catalog-link" href="#">
-                        Экшн-камеры
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li class="subcatalog-list-second">
-                  <ol class="subcatalog-catalog-list">
-                    <li class="subcatalog-catalog-item">
-                      <a class="subcatalog-catalog-link" href="#">
-                        Фитнес-браслеты
-                      </a>
-                    </li>
-                    <li class="subcatalog-catalog-item">
-                      <a class="subcatalog-catalog-link" href="#">
-                        Умные часы
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li class="subcatalog-list-third">
-                  <ol class="subcatalog-catalog-list">
-                    <li class="subcatalog-catalog-item">
-                      <a class="subcatalog-catalog-link" href="#">
-                        Квадрокоптеры
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-              </ul>
-            </li>
-            <li class="navigation-catalog-item">
-              <a class="main-navigation-link" href="#">Доставка</a>
-            </li>
-            <li class="navigation-catalog-item">
-              <a class="main-navigation-link" href="#">Гарантия</a>
-            </li>
-            <li class="navigation-catalog-item">
-              <a class="main-navigation-link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="header-navigation-wrapper">
+          <div class="catalog-header-wrapper">
+            <label class="catalog-header" for="subcatalog-product">Каталог товаров</label>
+            <input class="visually-hidden subcatalog-catalog-checkbox" id="subcatalog-product" type="checkbox">
+            <ul class="subcatalog-catalog">
+              <li class="subcatalog-list-first">
+                <ol class="subcatalog-catalog-list">
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Виртуальная реальность
+                    </a>
+                  </li>
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Моноподы для cелфи
+                    </a>
+                  </li>
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Экшн-камеры
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li class="subcatalog-list-second">
+                <ol class="subcatalog-catalog-list">
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Фитнес-браслеты
+                    </a>
+                  </li>
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Умные часы
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li class="subcatalog-list-third">
+                <ol class="subcatalog-catalog-list">
+                  <li class="subcatalog-catalog-item">
+                    <a class="subcatalog-catalog-link" href="#">
+                      Квадрокоптеры
+                    </a>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+          <nav class="main-navigation">
+            <ul class="navigation-catalog">
+              <li class="navigation-catalog-item">
+                <a class="main-navigation-link" href="#">Доставка</a>
+              </li>
+              <li class="navigation-catalog-item">
+                <a class="main-navigation-link" href="#">Гарантия</a>
+              </li>
+              <li class="navigation-catalog-item">
+                <a class="main-navigation-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -239,23 +241,26 @@
         </div>
 
         <div class="slider-pagination-wrapper">
-          <ol class="slider-pagination">
+          <ul class="slider-pagination">
             <li class="slider-pagination-item">
-              <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                <span class="visually-hidden">1 фото</span>
-              </button>
+              <label class="label-radio">
+                <input class="slider-pagination-link" type="radio" name="slider" value="first" checked>
+                <span class="visually-hidden">Первый слайдер.</span>
+              </label>
             </li>
             <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">2 фото</span>
-              </button>
+              <label class="label-radio">
+                <input class="slider-pagination-link" type="radio" name="slider" value="second">
+                <span class="visually-hidden">Второй слайдер.</span>
+              </label>
             </li>
             <li class="slider-pagination-item">
-              <button class="slider-pagination-button" type="button">
-                <span class="visually-hidden">3 фото</span>
-              </button>
+              <label class="label-radio">
+                <input class="slider-pagination-link" type="radio" name="slider" value="third">
+                <span class="visually-hidden">Третий слайдер.</span>
+              </label>
             </li>
-          </ol>
+          </ul>
         </div>
 
       </section>
@@ -461,12 +466,12 @@
 
     <footer class="page-footer">
       <div class="footer-container">
-        <a class="footer-logo-link">
+        <a class="footer-logo-link" href="index.html">
           <img class="footer-logo" width="145" height="36" src="./images/logo/footer-logo.svg"
             alt="Логотип магазина Девайс.">
         </a>
         <div class="footer-navigation-wrapper">
-          <address class="contacts-address">
+          <address class="contacts-address-footer">
             <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.
             </p>
           </address>
