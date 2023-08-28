@@ -144,12 +144,27 @@ body {
   font-weight: 400;
   line-height: 20px;
   background-color: #FFE17F;
+  cursor: pointer;
 }
 
 .input-search-info::placeholder {
   color: rgba(0, 0, 0, 0.3);
   padding-left: 48px;
 }
+
+.input-search-info:hover::placeholder {
+  color: #000000;
+  transition: color 0.3s ease-in-out;
+}
+
+.input-search-info:focus,
+.input-search-info:focus-visible,
+.button-search:focus,
+.button-search:focus-visible {
+  outline: 2px solid #AF4FFF;
+  border: none;
+}
+
 
 .search-form::before {
   content: "";
@@ -179,6 +194,18 @@ body {
   margin-left: -2px;
 }
 
+.button-search:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+  transition: color 0.3s ease-in-out;
+}
+
+.button-search:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000000;
+  transition: color 0.3s ease-in-out;
+}
+
 .navigation-authentication-wrapper {
   margin: 0;
   padding: 0;
@@ -201,7 +228,7 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 27px;
-  width: 231px;
+  min-width: 79px;
   position: relative;
   display: flex;
 }
@@ -221,7 +248,6 @@ body {
 .navigation-authentication-sign-in {
   margin: 0;
   padding: 0;
-  padding-right: 25px;
 }
 
 .navigation-authentication-item::before {
@@ -238,7 +264,9 @@ body {
 .navigation-sign-out {
   margin: 0;
   padding: 0;
+  margin-left: 24px;
   width: 56px;
+  display: inline-block;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -352,7 +380,7 @@ body {
   background-color: #000;
   width: 320px;
   margin: 0;
-  padding: 0 20px;
+  padding: 20px;
   position: relative;
   z-index: 2;
   display: none;
@@ -368,11 +396,12 @@ body {
   display: block;
 }
 
+.tooltip-cart:hover,
+.tooltip-cart:active {
+  display: block;
+}
 
-
-.tooltip-toggle-cart:hover + .tooltip-cart,
-.tooltip-toggle-cart:focus + .tooltip-cart,
-.tooltip-toggle-cart:default + .tooltip-cart {
+.tooltip-toggle-cart:hover + .tooltip-cart {
   display: block;
   z-index: 1000;
 }
@@ -384,7 +413,34 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   position: relative;
+  width: 183px;
 }
+
+.tooltip-cart-link {
+  display: flex;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+
+.tooltip-cart-link:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-cart-link:active {
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-cart-link:focus ,
+.tooltip-cart-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  border: none;
+}
+
 
 .tooltip-cart-list::before {
   content: "";
@@ -394,9 +450,29 @@ body {
   background-image: url(../images/tooltip-cart/cross-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
-  right: 0;
-  top: 20px;
+  border: none;
+  left: 270px;
+  top: 0;
+  display: block;
+  cursor: pointer;
 }
+
+.tooltip-cart-list:hover::before {
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-cart-list:active::before {
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-cart-list:focus::before,
+.tooltip-cart-list:focus-visible::before {
+  border: 2px solid #AF4FFF;
+  z-index: 5;
+}
+
 
 .tooltip-list-product {
   color: #FFF;
@@ -452,6 +528,23 @@ body {
   background-color: #FFF;
 }
 
+.button-open-cart:hover {
+  background-color: #FFE17F;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-open-cart:active {
+  background-color: #FFE17F;
+  color: rgba(0, 0, 0, 0.3);;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-open-cart:focus,
+.button-open-cart:focus-visible {
+  outline: 2px solid  #AF4FFF;
+  border: none;
+}
+
 /* Каталог товаров с подкаталогом*/
 .header-navigation-wrapper {
   display: flex;
@@ -480,7 +573,7 @@ body {
   text-transform: uppercase;
   color: #000000;
   cursor: pointer;
-  display: flex;
+  display: block;
   align-items: center;
   position: relative;
   width: 293px;
@@ -488,6 +581,7 @@ body {
   margin: 0;
   padding-top: 15px;
   padding-bottom: 15px;
+
 }
 
 .catalog-header::before {
@@ -497,7 +591,9 @@ body {
   height: 50px;
   border-radius: 50%;
   border: 2px solid rgba(0, 0, 0, 0.3);
-  background: url(../images/header/plus.svg) no-repeat center;
+  background-image: url(../images/header/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   left: 243px;
   top: 0;
   cursor: pointer;
@@ -508,7 +604,11 @@ body {
   z-index: 10;
 }
 
-
+.catalog-header:focus,
+.catalog-header:focus-visible {
+  outline: 2px solid #AF4FFF;
+  border: none;
+}
 
 .subcatalog-catalog-checkbox:checked~.subcatalog-catalog {
   position: absolute;
@@ -613,6 +713,21 @@ body {
   text-transform: uppercase;
 }
 
+.main-navigation-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+  transition: color 0.3s ease-in-out;
+}
+
+.main-navigation-link:active {
+  color: rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease-in-out;
+}
+
+.main-navigation-link:focus,
+.main-navigation-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  border: none;
+}
 
 
 /* Промоушн слайды*/
@@ -632,10 +747,6 @@ body {
   justify-content: space-between;
   width: 1160px;
   position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 
@@ -656,10 +767,6 @@ body {
   justify-content: center;
   right: 49px;
   top: -122px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .promotion-slider-wrapper-second::before {
@@ -812,6 +919,7 @@ body {
   cursor: pointer;
   z-index: 5;
   appearance: none;
+  position: relative;
 }
 
 .slider-pagination-link:disabled {
@@ -841,6 +949,7 @@ body {
 .slider-pagination-link:checked {
   background-color: #000000;
   cursor: pointer;
+  position: relative;
 }
 
 
@@ -1067,9 +1176,6 @@ body {
   align-items: center;
   justify-content: start;
   position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .advantages::before {
@@ -1081,9 +1187,6 @@ body {
   left: -140px;
   top: 102px;
   z-index: -2;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .advantages-navigation {
@@ -1104,9 +1207,6 @@ body {
   row-gap: 35px;
   text-align: center;
   box-sizing: border-box;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .advantages-item {
@@ -1116,9 +1216,6 @@ body {
   padding-left: 0;
   padding-right: 120px;
   position: relative;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .advantages-link {
@@ -1134,16 +1231,16 @@ body {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+  display: inline-block;
+  width: 160px;
 }
 
 .advantages-item:not(.advantages-item-marked)::before {
   content: "";
   border-bottom: 8px solid #FFE17F;
   position: absolute;
-  top: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   width: 160px;
   z-index: -1;
@@ -1162,6 +1259,17 @@ body {
   color: #FFE17F;
 }
 
+.advantages-item:hover a,
+.advantages-item:active a {
+  padding-left: 35px;
+}
+
+.advantages-item:focus a {
+  padding-left: 35px;
+
+}
+
+
 .advantages-marked {
   margin: 0;
   padding: 0;
@@ -1169,17 +1277,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  outline: 1px solid red;
-  outline-offset: -1px;
+
+
 }
 
 .advantages-marked-delivery {
   width: 453px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
-
 }
 
 
@@ -1190,10 +1293,6 @@ body {
   height: 164px;
   position: absolute;
   right: 63px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .advantages-marked-guarantee {
@@ -1209,10 +1308,6 @@ body {
   height: 195px;
   position: absolute;
   right: 28px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .advantages-marked-credit {
@@ -1228,10 +1323,6 @@ body {
   height: 188px;
   position: absolute;
   right: 28px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 
@@ -1256,13 +1347,12 @@ body {
   margin: 0;
   padding: 0;
   margin-top: 34px;
-
 }
 
 
 .advantages-slogan-block {
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 0;
   width: 1160px;
   display: flex;
   align-items: center;
@@ -1271,77 +1361,54 @@ body {
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
+  z-index: 2;
+}
 
-  outline: 1px solid red;
-  outline-offset: -1px;
+
+.advantages-slogan-link {
+  margin: 0;
+  padding: 0;
+  width: 1160px;
+  height: 100px;
+  position: relative;
+}
+
+.advantages-slogan-link::before {
+  content: "";
+  position: absolute;
+  width: 125px;
+  height: 100px;
+  background-color: #FFE17F;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+
+.advantages-slogan-link::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(220, 220, 220, 0.5);
+  right: 42.5px;
+  top: 30px;
+  z-index: -1;
 }
 
 .advantages-slogan-image {
   position: absolute;
-  background-color: #FFE17F;
-  background-position: center;
+  display: block;
+  background-repeat: no-repeat;
+  justify-content: center;
   width: 47px;
   height: 31px;
-  margin: 0;
+  margin: 35px 39px 34px 39px;
   padding: 0;
   left: 0;
   cursor: pointer;
-  z-index: 50;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-.advantages-slogan-block:hover + .advantages-slogan-block::before {
-  cursor: pointer;
-  background-color: #FFC700;
-  transition: background-color 300ms ease-in-out;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-.advantages-slogan-block::after {
-  content: url(../images/advantages/ellipse-decor.svg);
-  position: absolute;
-  background-image: url(../images/advantages/advantages-slogan-decor-i.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 40px;
-  height: 40px;
-  border: none;
-  margin: 0;
-  padding: 0;
-  right: 42.5px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-}
-
-.advantages-slogan-block::after:hover {
-  content: url(../images/advantages/ellipse-decor.svg);
-  position: absolute;
-  background-image: url(../images/advantages/advantages-slogan-decor-i.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 40px;
-  height: 40px;
-  border: none;
-  margin: 0;
-  padding: 0;
-  right: 42.5px;
-  transition: background-color 300ms ease-in-out;
-}
-
-
-.advantages-slogan-block:active {
-  opacity: 0.3;
-}
-
-.advantages-slogan-block:focus,
-.advantages-slogan-block:focus-visible {
-  outline: 2px solid #AF4FFF;
+  z-index: 1;
 }
 
 .advantages-slogan-info {
@@ -1355,11 +1422,52 @@ body {
   letter-spacing: 4px;
   text-transform: uppercase;
   width: 910px;
-  margin: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+  margin: 40px auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
+
+.advantages-slogan-image-i {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "Raleway";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  position: absolute;
+  display: block;
+  background-repeat: no-repeat;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  right: 61px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 21;
+}
+
+
+.advantages-slogan-block:hover + .advantages-slogan-block::before {
+  cursor: pointer;
+  background-color: #FFC700;
+  transition: background-color 300ms ease-in-out;
+}
+
+
+.advantages-slogan-block:active {
+  opacity: 0.3;
+}
+
+.advantages-slogan-block:focus,
+.advantages-slogan-block:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+
 
 .contacts-container {
   margin: 0 auto;
@@ -1692,14 +1800,15 @@ body {
   opacity: 0.3;
 }
 
+.subscribe-wrapper {
+  width: 100%;
+  background-color: #F0F0F0;
+}
+
 .subscribe {
   margin: 0;
   padding: 0;
   width: 1440px;
-  background-color: #F0F0F0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .subscribe-container {
@@ -1710,9 +1819,6 @@ body {
   margin: 0 auto;
   padding: 0;
   margin-bottom: 144px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .subscribe-title {
@@ -1726,9 +1832,6 @@ body {
   font-weight: 800;
   line-height: 50px;
   width: 348px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .subscribe-description {
@@ -1742,9 +1845,6 @@ body {
   font-weight: 400;
   line-height: 30px;
   width: 560px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .subscribe-form-wrapper {
@@ -1757,9 +1857,6 @@ body {
   margin-left: 141px;
   margin-right: 141px;
   padding-bottom: 56px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -1851,9 +1948,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .subscribe-reason::before {
@@ -1865,9 +1959,6 @@ body {
   background-position: center;
   left: 0;
   top: 20px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 /* Подвал сайта */
@@ -1876,9 +1967,6 @@ body {
   padding: 0;
   background-color: #444444;
   width: 1440px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .footer-container {
@@ -2152,11 +2240,7 @@ a.footer-contacts-logo-htmlacademy:hover {
   width: 1440px;
   margin-top: -123px;
   background: linear-gradient(0deg, #F0F0F0 90%, #FFFFFF 0%);
-  z-index: 5;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+  z-index: 1;
 }
 
 .inner-header {
@@ -2165,11 +2249,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 0;
   padding-left: 60px;
   margin-bottom: 34px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 .inner-header-title {
@@ -2183,8 +2262,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 0;
   margin-top: 35px;
   margin-bottom: 16px;
-
-
 }
 
 
@@ -2193,19 +2270,12 @@ a.footer-contacts-logo-htmlacademy:hover {
   display: flex;
   margin: 0;
   padding: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
 .breadcrumbs-item {
   position: relative;
-
   list-style-type: none;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .breadcrumbs-link {
@@ -2217,10 +2287,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -2233,7 +2299,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   width: 4px;
   height: 7px;
   background: url(../images/catalog/breadcrumbs-icon.svg) no-repeat;
-
 }
 
 .breadcrumbs-item:last-child::after {
@@ -2246,11 +2311,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   display: flex;
   margin: 0;
   padding: 0;
-
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .catalog-filter {
@@ -2262,13 +2322,9 @@ a.footer-contacts-logo-htmlacademy:hover {
   margin: 0;
   padding: 0;
   padding-left: 60px;
-
   display: flex;
   flex-direction: column;
   list-style-type: none;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .select-control-title {
@@ -2284,10 +2340,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 0;
   padding-top: 25px;
   padding-bottom: 25px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px
 }
 
 .catalog-filter-group {
@@ -2295,8 +2347,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   margin: 0;
   padding: 0;
   margin-top: 35px;
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .catalog-filter-title {
@@ -2336,17 +2386,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   border-radius: 50%;
   cursor: pointer;
   box-sizing: border-box;
-}
-
-.range-toggle:hover {
-  background-color: #dbb590;
-  transition: background-color 300ms ease-in-out;
-
-}
-
-.range-toggle:active,
-.range-toggle:focus {
-  outline: 3px solid #dbb590;
 }
 
 .toggle-min {
@@ -2490,11 +2529,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 0;
   list-style-type: none;
   padding-top: 20px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 
@@ -2566,10 +2600,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 0;
   margin-bottom: -1px;
   background: #FFF;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 /* Сортировка */
@@ -2579,18 +2609,11 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 20px 40px;
   width: 840px;
   background: #F0F0F0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .sorting-container .button {
   width: 30px;
   height: 30px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .sorting-control-title {
@@ -2604,8 +2627,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   line-height: normal;
   letter-spacing: 3.2px;
   text-transform: uppercase;
-
-
 }
 
 .select-control {
@@ -2624,10 +2645,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   background-repeat: no-repeat;
   background-position: right 0 center;
   border: none;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .button-up,
@@ -2637,9 +2654,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .button-up-icon,
@@ -2675,12 +2689,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   justify-content: space-between;
   row-gap: 44px;
   list-style-type: none;
-
-
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -2701,10 +2709,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   background-color: inherit;
   right: 27px;
   top: 27px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 
@@ -2723,9 +2727,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 0;
   text-decoration: none;
   display: flex;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .product-card-image {
@@ -2734,10 +2735,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   width: 360px;
   height: 380px;
   object-fit: cover;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -2754,10 +2751,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   line-height: 20px;
   letter-spacing: -0.36px;
   text-decoration: none;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .product-card-price {
@@ -2770,9 +2763,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   line-height: normal;
   display: flex;
   align-self: start;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -2792,11 +2782,9 @@ a.footer-contacts-logo-htmlacademy:hover {
   width: 220px;
   height: 40px;
   outline: none;
-
   position: absolute;
   top: 170px;
   left: 70px;
-
   appearance: none;
 
 }
@@ -2807,10 +2795,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   display: flex;
   flex-direction: column;
   margin-bottom: 78px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
-
 }
 
 
@@ -2830,9 +2814,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   line-height: normal;
   letter-spacing: 3.2px;
   text-transform: uppercase;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .button-download-more:hover {
@@ -2863,9 +2844,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   grid-template-columns: 128px 491px 141px;
   justify-content: space-between;
   background: #EBEBEB;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -2882,27 +2860,16 @@ a.footer-contacts-logo-htmlacademy:hover {
   line-height: normal;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
 .pagination-back {
   color: rgba(68, 68, 68, 0.3);
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .pagination-number {
   margin: 0 auto;
   padding: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .pagination {
@@ -2910,9 +2877,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .pagination-link {
@@ -2929,17 +2893,10 @@ a.footer-contacts-logo-htmlacademy:hover {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .pagination-current {
   color: rgba(68, 68, 68, 0.6);
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .pagination-back:default,
@@ -3006,16 +2963,13 @@ a.footer-contacts-logo-htmlacademy:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  z-index: 2;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .modal {
@@ -3023,10 +2977,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 0;
   background: #FFFFFF;
   position: relative;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .modal-close-button {
@@ -3042,10 +2992,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   background-color: #FFFFFF;
   border: none;
   background-position: center;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .modal-close-button:hover {
@@ -3090,9 +3036,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   font-style: normal;
   font-weight: 800;
   line-height: 50px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .field-group-wrapper {
@@ -3103,9 +3046,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   grid-template-columns: repeat(2, 360px);
   justify-content: space-between;
   margin-bottom: 42px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -3128,7 +3068,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.36px;
-
 }
 
 .field-name {
@@ -3188,10 +3127,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   text-align: left;
 }
 
-
-
-
-
 .delivery-info-wrapper {
   width: 760px;
   margin: 0;
@@ -3200,9 +3135,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   grid-template-columns: 540px 180px;
   justify-content: space-between;
   margin-bottom: 42px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .delivery-form,
@@ -3238,9 +3170,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   width: 540px;
   margin: 0;
   padding: 20px;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -3254,9 +3183,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 0;
   background-color: #F0F0F0;
   align-items: center;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .field-quantity {
@@ -3274,10 +3200,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   padding: 0;
   background-color: #F0F0F0;
   border: none;
-
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .minus,
@@ -3300,9 +3222,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 
@@ -3340,9 +3259,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   height: 26px;
   left: 120px;
   top: -3px;
-
-
-
 }
 
 
@@ -3354,7 +3270,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   background-image: url(../images/modal/icon-info.svg);
   background-repeat: no-repeat;
   background-position: center;
-
   border: none;
   display: block;
 }
@@ -3369,7 +3284,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   right: -39px;
   top: 36px;
   display: none;
-
   color: #FFF;
   font-family: "Rubik";
   font-size: 16px;
@@ -3386,8 +3300,6 @@ a.footer-contacts-logo-htmlacademy:hover {
   position: absolute;
   top: -21px;
   right: 37px;
-
-
 }
 
 .tooltip-toggle:hover + .tooltip-text,
