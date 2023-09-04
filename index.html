@@ -21,11 +21,15 @@
           </a>
         </div>
         <div class="search-navigation-wrapper">
-          <form class="search-form" action="#" method="get">
-            <label class="search-site-form" for="search-site"></label>
-            <input class="input-search-info" type="search" id="search-site" name="search-site"
-              placeholder="Поиск по сайту">
-            <button class="button button-search" type="button">Найти</button>
+          <form class="search-form" action="/search" method="get" role="search">
+            <div class="search-site-form-wrapper">
+              <label class="search-site-form" for="search-site"></label>
+              <input class="input-search-info" type="search" id="search-site" name="search-site"
+                placeholder="Поиск по сайту">
+            </div>
+            <div class="button-search-wrapper">
+              <button class="button button-search" type="button">Найти</button>
+            </div>
           </form>
           <div class="navigation-authentication-wrapper">
             <nav class="navigation-authentication">
